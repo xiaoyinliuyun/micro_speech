@@ -1,0 +1,16 @@
+F tensorflow/lite/toco/tooling_util.cc:1728] 
+
+Array Relu, which is an input to the FullyConnected operator producing the output array add_1, is lacking min/max data, which is necessary for quantization. 
+
+If accuracy matters, either target a non-quantized output format, or run quantized training with your model from a floating point checkpoint to change the input graph to contain min/max information. 
+
+If you don't care about accuracy, you can pass --default_ranges_min= and --default_ranges_max= for easy experimentation.
+
+Fatal Python error: Aborted
+
+
+数组Relu是产生输出数组add_1的fulllyconnected算子的输入，它缺少量化所必需的最小/最大数据。
+
+如果准确性很重要，要么以非量化输出格式为目标，要么从浮点检查点运行模型的量化训练，以更改输入图以包含最小/最大信息。
+
+如果你不关心精度，你可以传递——default_ranges_min=和——default_ranges_max=来方便实验。
