@@ -1,7 +1,6 @@
 # .gitignore
 
 retrain_logs/data
-speech_commands_train/
 speech_dataset/
 
 
